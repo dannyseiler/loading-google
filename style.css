@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loader-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px auto;
+  width: 500px;
+  height: 500px;
+}
+
+.loader-container .loader {
+  position: absolute;
+
+  width: 50px;
+  height: 50px;
+  border: 3px solid yellow;
+  border-top-color: red;
+  border-right-color: blue;
+  border-bottom-color: green;
+  border-radius: 50%;
+
+  animation-name: loader;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-iteration-count: infinite;
+}
+
+/* KEYFRAMES */
+
+@keyframes loader {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
